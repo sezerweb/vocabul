@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600&display=swap");
+$color-dark: #191919;
+$color-light: #fff; 
+
+$color-active:rgb(106, 116, 116);;
+$color-wrong: rgb(243, 137, 17);;
+$color-right: rgb(14, 204, 109);;
+
+
+
+
+body {
+  font-size: 16px;
+  color: $color-dark;
+  font-family: "Maven Pro", sans-serif;
+  background-color: $color-light;
+}
+
+
+
+.container {
+  width: 100vw;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1dvh;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    height: 8dvh;
+    user-select: none;
+    background-color: $color-dark;
+    color: $color-light;
+
+    .logo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex: 1;
+      padding-left: 0.5em;
+      mask-size: cover;
+      img{
+        width: 2em;
+        height: 2em;
+      }
+    }
+    .app-name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1; 
+      gap:.2em;
+    }
+    .icons {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex: 1; 
+      padding-right: 0.8em;
+      gap: .4em;
+      div {
+        width: 1.4em;
+        height: 1.4em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background: $color-light;
+        mask-size: cover;
+      
+      }
+      .info {
+        mask: url(/images/info_black_24dp.svg);
+        mask-repeat: no-repeat;
+      
+      }
+      .stats {
+        mask: url(/images/bar_chart_black_24dp.svg);
+        mask-repeat: no-repeat;
+      }
+      .settings {
+        mask: url(/images/settings_black_24dp.svg);
+        mask-repeat: no-repeat;
+      }
+    }
+  }
+
+  .words {
+    width: 100vw;
+    height: 55dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+
+    .row {
+      width: 100vw;
+      height: 7.5dvh;
+      display: flex;
+      justify-content: center;
+      gap: 0.5vh;
+      .word-key {
+        width: 7dvh;
+        height: 7dvh;
+        border: 1px solid $color-dark;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 1.5em;
+        color:$color-light;
+      }
+      .active{
+        background-color:$color-active;
+       
+      }
+      .right{
+        background-color: $color-right;
+      }
+      .wrong{
+        background-color: $color-wrong;
+      }
+   
+    }
+  }
+  .keypad-area {
+    height: 30dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+
+    .keys-letters {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.5dvh;
+
+      .row {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5dvh;
+        max-width: 500px;
+
+        .key {
+          width: 7.7vw;
+          height: 10dvh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 6px;
+          cursor: pointer;
+          background-color: $color-dark;
+          color: $color-light;
+        }
+        .delete {
+          width: 13vw;
+        }
+        .try {
+          width: 30vw;
+        }
+
+        .active{
+            background-color:$color-active;
+            cursor: default;
+          }
+          .right{
+            background-color: $color-right;
+          }
+          .wrong{
+            background-color: $color-wrong;
+          }
+      }
+    }
+  }
+  .footer {
+    height: 3dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-dark;
+    color: $color-light;
+    font-size: 0.7em;
+  }
+
+
+}
