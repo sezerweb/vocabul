@@ -1,2 +1,2 @@
-# vocabul
-#Wordle Clone
+# VocaBul
+## Wordle Clone
