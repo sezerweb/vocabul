@@ -4,24 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vocabul</title>
+    <title>VocaBul</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="container">
       <div class="header">
-        <div class="logo"><img src="images/logo.svg" ></div>
-        <div class="app-name">VocaBul</div>
+        <div class="logo">
+          <span>VocaBul</span
+          ><img src="images/logo.svg" alt="VocaBul" title="VocaBul" />
+        </div>
         <div class="icons">
-          <div class="info"></div>
-          <div class="stats"></div>
-          <div class="settings"> </div>
+          <div class="info-button"></div>
+          <div class="stats-button"></div>
+          <div class="settings-button"></div>
         </div>
       </div>
-     
-      <div class="words"> 
-        <div class="row"  style="display:none;">
-            <div class="addv">Reklam</div> 
+      <div class="words">
+        <div class="row" style="display: none">
+          <div class="addv">Reklam</div>
         </div>
         <div class="row">
           <div class="word-key active">K</div>
@@ -67,53 +72,83 @@
         </div>
       </div>
       <div class="keypad-area">
-        <div class="keys-letters">
-          <div class="row">
-            <div class="key">E</div>
-            <div class="key active">R</div>
-            <div class="key">T</div>
-            <div class="key">Y</div>
-            <div class="key">U</div>
-            <div class="key">I</div>
-            <div class="key">O</div>
-            <div class="key">P</div>
-            <div class="key">Ğ</div>
-            <div class="key wrong">Ü</div>
-            <div class="key delete">SİL</div>
+        <div class="row">
+          <div class="key">E</div>
+          <div class="key active">R</div>
+          <div class="key">T</div>
+          <div class="key">Y</div>
+          <div class="key">U</div>
+          <div class="key">I</div>
+          <div class="key">O</div>
+          <div class="key">P</div>
+          <div class="key">Ğ</div>
+          <div class="key wrong">Ü</div>
+          <div class="key delete">
+            <div></div>
           </div>
-          <div class="row">
-            <div class="key">A</div>
-            <div class="key">S</div>
-            <div class="key">D</div>
-            <div class="key">F</div>
-            <div class="key">G</div>
-            <div class="key">H</div>
-            <div class="key">J</div>
-            <div class="key active">K</div>
-            <div class="key">L</div>
-            <div class="key">Ş</div>
-            <div class="key">İ</div>
-          </div>
-          <div class="row">
-            <div class="key">Z</div>
-            <div class="key">C</div>
-            <div class="key">V</div>
-            <div class="key">B</div>
-            <div class="key">N</div>
-            <div class="key right">M</div>
-            <div class="key active">Ö</div>
-            <div class="key">Ç</div>
-            <div class="key try">DENE</div>
+        </div>
+        <div class="row">
+          <div class="key">A</div>
+          <div class="key">S</div>
+          <div class="key">D</div>
+          <div class="key">F</div>
+          <div class="key">G</div>
+          <div class="key">H</div>
+          <div class="key">J</div>
+          <div class="key active">K</div>
+          <div class="key">L</div>
+          <div class="key">Ş</div>
+          <div class="key">İ</div>
+        </div>
+        <div class="row">
+          <div class="key">Z</div>
+          <div class="key">C</div>
+          <div class="key">V</div>
+          <div class="key">B</div>
+          <div class="key">N</div>
+          <div class="key right">M</div>
+          <div class="key active">Ö</div>
+          <div class="key">Ç</div>
+          <div class="key try">
+            <img src="images/logo.svg" alt="Vocabul" title="Vocabul" />
           </div>
         </div>
       </div>
-     <div class="footer">
-       sezerweb
-     </div>
-    
-    </div>
-
-
+      <div class="footer"><a href="http://sezerweb.com" target="_blank">sezerweb</a></div>
+      <div class="info-box">
+        <div class="row">
+          <span class="close-button info-close"></span>
+          <h2>Info</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quae
+            voluptas sapiente labore alias, odio est quo qui minus minima.
+            Accusamus, deleniti. Rem cum aliquam natus? Sed in dolore ipsam.
+          </p>
+        </div>
+      </div>
+      <div class="stats-box">
+        <div class="row">
+          <span class="close-button stats-close"></span>
+          <h2>Stats</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quae
+            voluptas sapiente labore alias, odio est quo qui minus minima.
+            Accusamus, deleniti. Rem cum aliquam natus? Sed in dolore ipsam.
+          </p>
+        </div>
+      </div>
+      <div class="settings-box">
+        <div class="row">
+          <span class="close-button settings-close"></span>
+          <h2>Settings</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quae
+            voluptas sapiente labore alias, odio est quo qui minus minima.
+            Accusamus, deleniti. Rem cum aliquam natus? Sed in dolore ipsam.
+          </p>
+        </div>
+      </div>
+    </div> 
     <script src="js/script.js"></script>
   </body>
 </html>
