@@ -1,11 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600&display=swap");
 
-$color-dark: #191919;
-$color-light: #fff;
 
-$color-active: rgb(106, 116, 116);
-$color-wrong: rgb(243, 137, 17);
-$color-right: rgb(14, 204, 109);
+.dark{
+  --color-dark:#191919;
+  --color-light:#fff;
+  --color-page-back :#191919 ;
+  --color-text:#fff ;
+}
+
+.light{
+  --color-dark:#191919;
+  --color-light:#fff;
+  --color-page-back :#f7f7f7 ;
+  --color-text:#191919 ;
+}
+
+
+.default-colors{
+  --color-active:#787C7E;
+  --color-wrong:#C9B458;
+  --color-right:#6AAA64; 
+}
+
+.high-contrast{
+  --color-active:#343436;
+  --color-wrong:#85C0F9;
+  --color-right:#F5793A; 
+}
+
 
 * {
   margin: 0;
@@ -15,13 +37,13 @@ $color-right: rgb(14, 204, 109);
 
 body {
   font-size: 16px;
-  color: $color-dark;
+  color: var(--color-dark);
   font-family: "Maven Pro", sans-serif;
-  background-color: $color-light;
+  background-color: var(--color-page-back);
   user-select: none;
 }
 a,a:link,a:hover,a:active,a:visited{
-  color: $color-light;
+  color: var(--color-light);
   text-decoration: none;
 }
 
@@ -38,9 +60,10 @@ a,a:link,a:hover,a:active,a:visited{
     justify-content: space-between;
     align-items: center;
     height: 8vh;
-    background-color: $color-dark;
-    color: $color-light;
+    background-color: var(--color-dark);
+    color: var(--color-light);
     padding: 0 1em;
+    border-bottom: 1px solid var(--color-active);
     .logo {
       mask-size: cover;
       flex: 1;
@@ -74,7 +97,7 @@ a,a:link,a:hover,a:active,a:visited{
         width: 1.4em;
         height: 1.4em;
         cursor: pointer;
-        background: $color-light;
+        background: var(--color-active);
         mask-size: cover;
       }
       .info-button {
@@ -106,13 +129,13 @@ a,a:link,a:hover,a:active,a:visited{
     .word-key {
       width: 7vh;
       height: 7vh;
-      border: 1px solid $color-dark;
+      border: 1px solid var(--color-active);
       display: flex;
       justify-content: center;
       align-items: center;
       font-weight: bold;
       font-size: 1.5em;
-      color: $color-light;
+      color: var(--color-light);
     }
   }
 
@@ -136,6 +159,7 @@ a,a:link,a:hover,a:active,a:visited{
         justify-content: center;
         align-items: center;
         border-radius: 6px;
+        border: 1px solid var(--color-active);
         cursor: pointer;
       }
       .delete {
@@ -144,7 +168,7 @@ a,a:link,a:hover,a:active,a:visited{
           width: 1.4em;
           height: 1.4em; 
           mask-size: cover;
-          background-color: $color-light;
+          background-color: var(--color-light);
           mask: url(/images/backspace_black_24dp.svg);
           mask-repeat: no-repeat;
         }
@@ -164,33 +188,34 @@ a,a:link,a:hover,a:active,a:visited{
   .footer {
     height: 3vh;
     text-align: center;
-    background-color: $color-dark;
-    color: $color-light;
+    background-color: var(--color-dark);
+    color: var(--color-light);
     font-size: 0.7em;
     padding-top: 0.4em;
   }
 
   .key {
-    background-color: $color-dark;
-    color: $color-light;
-    box-shadow: 0 0 .2em rgba( $color-dark, $alpha: .3) ;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    box-shadow: 0 0 .2em rgba( var(--color-dark), $alpha: .3) ;
   }
   .active {
-    background-color: $color-active;
+    background-color: var(--color-active);
     cursor: default !important;
   }
   .right {
-    background-color: $color-right;
+    background-color: var(--color-right);
   }
   .wrong {
-    background-color: $color-wrong;
+    background-color: var(--color-wrong);
   }
 
   .info-box, .stats-box, .settings-box{
     position: absolute;
     width: 100vw; 
    
-    background-color: $color-light;
+    background-color: var(--color-page-back);
+    color: var(--color-text);
 		transition: all .4s ease-in-out;
     display: flex;
     justify-content: flex-start;
@@ -216,7 +241,7 @@ a,a:link,a:hover,a:active,a:visited{
         width: 1.4em;
         height: 1.4em;
         cursor: pointer ;
-        background: $color-dark;
+        background: var(--color-text);
         mask-size: cover;
         mask: url(/images/close_black_24dp.svg);
         mask-repeat: no-repeat;
