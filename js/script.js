@@ -10,6 +10,35 @@ const settingsBox = document.getElementsByClassName("settings-box")[0];
 const settingsButton = document.getElementsByClassName("settings-button")[0];
 const settingsClose = document.getElementsByClassName("settings-close")[0];
 
+const hardModeSwitch = document.getElementById("hardMode") ;
+const darkThemeSwitch = document.getElementById("darkTheme") ;
+const highContrastSwitch = document.getElementById("highContrast") ;
+
+
+darkThemeSwitch.addEventListener("change", () => {
+  if(darkThemeSwitch.checked){
+    document.body.classList.add("dark");
+    document.body.classList.remove("light");
+
+  }else{
+    document.body.classList.remove("dark");
+    document.body.classList.add("light");
+  }
+});
+
+highContrastSwitch.addEventListener("change", () => {
+  if(highContrastSwitch.checked){
+    document.body.classList.add("high-contrast");
+    document.body.classList.remove("default-colors");
+
+  }else{
+    document.body.classList.remove("high-contrast");
+    document.body.classList.add("default-colors");
+  }
+});
+
+
+
 infoButton.addEventListener("click", () => {
   openBox("info");
 });
@@ -51,4 +80,4 @@ function closeBox() {
   settingsBox.classList.remove("open");
 }
 
-openBox("settings");
+//openBox("settings");

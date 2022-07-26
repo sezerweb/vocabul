@@ -21,7 +21,7 @@
 }
 
 .high-contrast {
-  --color-active: #343436;
+  --color-active: #787c7e;
   --color-wrong: #85c0f9;
   --color-right: #f5793a;
 }
@@ -183,6 +183,10 @@ a:visited {
       }
     }
   }
+  .example{
+    display: block;
+    height: auto;
+  }
 
   .footer {
     height: 3vh;
@@ -278,14 +282,12 @@ a:visited {
             height: 34px;
           }
           
-          /* Hide default HTML checkbox */
           .switch input {
             opacity: 0;
             width: 0;
             height: 0;
           }
           
-          /* The slider */
           .slider {
             position: absolute;
             cursor: pointer;
@@ -341,6 +343,29 @@ a:visited {
           justify-content: center;
           align-items: center;
         }
+      }
+      .example-theme{
+
+        margin-top: 2em;
+
+        .row {
+          display: flex;
+          gap: 0.5em;
+          margin-top: .5em;
+        }
+        .word-key {
+          width: 7vh;
+          height: 7vh;
+          border: 1px solid var(--color-active);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: bold;
+          font-size: 1.5em;
+          color: var(--color-light);
+        }
+
+
       }
     }
   }

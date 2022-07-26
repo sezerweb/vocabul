@@ -20,7 +20,7 @@
 }
 
 .high-contrast {
-  --color-active: #343436;
+  --color-active: #787c7e;
   --color-wrong: #85c0f9;
   --color-right: #f5793a;
 }
@@ -196,6 +196,10 @@ a:visited {
   height: 4vh;
   margin-top: 0.5vh;
 }
+.container .example {
+  display: block;
+  height: auto;
+}
 .container .footer {
   height: 3vh;
   text-align: center;
@@ -289,8 +293,6 @@ a:visited {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* Hide default HTML checkbox */
-  /* The slider */
 }
 .container .info-box .row .cols .col span:nth-child(2),
 .container .stats-box .row .cols .col span:nth-child(2),
@@ -370,4 +372,29 @@ a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.container .info-box .row .example-theme,
+.container .stats-box .row .example-theme,
+.container .settings-box .row .example-theme {
+  margin-top: 2em;
+}
+.container .info-box .row .example-theme .row,
+.container .stats-box .row .example-theme .row,
+.container .settings-box .row .example-theme .row {
+  display: flex;
+  gap: 0.5em;
+  margin-top: 0.5em;
+}
+.container .info-box .row .example-theme .word-key,
+.container .stats-box .row .example-theme .word-key,
+.container .settings-box .row .example-theme .word-key {
+  width: 7vh;
+  height: 7vh;
+  border: 1px solid var(--color-active);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: var(--color-light);
 }/*# sourceMappingURL=style.css.map */
