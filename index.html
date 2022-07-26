@@ -5,13 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vokay</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
     <link rel="manifest" href="site.webmanifest" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="light default-colors">
+  <body class="dark default-colors">
     <div class="container">
       <div class="header">
         <div class="logo">
@@ -29,10 +43,10 @@
           <div class="addv">Reklam</div>
         </div>
         <div class="row">
-          <div class="word-key active">V</div>
+          <div class="word-key right">V</div>
           <div class="word-key active">O</div>
-          <div class="word-key active right">K</div>
-          <div class="word-key active wrong">A</div>
+          <div class="word-key active">K</div>
+          <div class="word-key wrong">A</div>
           <div class="word-key active">Y</div>
         </div>
         <div class="row">
@@ -74,21 +88,21 @@
       <div class="keypad-area">
         <div class="row">
           <div class="key">E</div>
-          <div class="key active">R</div>
+          <div class="key">R</div>
           <div class="key">T</div>
-          <div class="key">Y</div>
+          <div class="key active">Y</div>
           <div class="key">U</div>
           <div class="key">I</div>
-          <div class="key">O</div>
+          <div class="key active">O</div>
           <div class="key">P</div>
           <div class="key">Ğ</div>
-          <div class="key wrong">Ü</div>
+          <div class="key">Ü</div>
           <div class="key delete">
             <div></div>
           </div>
         </div>
         <div class="row">
-          <div class="key">A</div>
+          <div class="key wrong">A</div>
           <div class="key">S</div>
           <div class="key">D</div>
           <div class="key">F</div>
@@ -103,18 +117,20 @@
         <div class="row">
           <div class="key">Z</div>
           <div class="key">C</div>
-          <div class="key">V</div>
+          <div class="key right">V</div>
           <div class="key">B</div>
           <div class="key">N</div>
-          <div class="key right">M</div>
-          <div class="key active">Ö</div>
+          <div class="key">M</div>
+          <div class="key">Ö</div>
           <div class="key">Ç</div>
           <div class="key try">
             <img src="images/logo.svg" alt="Vokay" title="Vokay" />
           </div>
         </div>
       </div>
-      <div class="footer"><a href="http://sezerweb.com" target="_blank">sezerweb</a></div>
+      <div class="footer">
+        <a href="http://sezerweb.com" target="_blank">sezerweb</a>
+      </div>
       <div class="info-box">
         <div class="row">
           <span class="close-button info-close"></span>
@@ -140,15 +156,55 @@
       <div class="settings-box">
         <div class="row">
           <span class="close-button settings-close"></span>
-          <h2>Settings</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quae
-            voluptas sapiente labore alias, odio est quo qui minus minima.
-            Accusamus, deleniti. Rem cum aliquam natus? Sed in dolore ipsam.
-          </p>
+          <h2>Ayarlar</h2>
+          <div class="cols">
+            <div class="col">
+              <span>Zor Mod</span>
+              <span
+                >Ortaya çıkan herhangi bir ipucu sonraki tahminlerde
+                kullanılmalıdır.</span>
+            
+            </div>
+            <div class="col">
+
+              <label class="switch">
+                <input type="checkbox"  id="hard_mode">
+                <span class="slider round"></span>
+              </label>
+
+            </div>
+          </div>
+          <div class="cols">
+            <div class="col">
+              <span>Koyu Tema</span>
+            </div>
+            <div class="col">
+
+              <label class="switch">
+                <input type="checkbox" id="dark_theme" checked >
+                <span class="slider round"></span>
+              </label>
+
+            </div>
+          </div>
+
+          <div class="cols">
+            <div class="col">
+              <span>Renk Körü Modu</span>
+              <span>Yüksek kontrast modu.</span>
+            </div>
+            <div class="col">
+
+              <label class="switch">
+                <input type="checkbox" id="high_contrast">
+                <span class="slider round"></span>
+              </label>
+
+            </div>
+          </div>
         </div>
       </div>
-    </div> 
+    </div>
     <script src="js/script.js"></script>
   </body>
 </html>

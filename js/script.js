@@ -11,27 +11,44 @@ const settingsButton = document.getElementsByClassName("settings-button")[0];
 const settingsClose = document.getElementsByClassName("settings-close")[0];
 
 infoButton.addEventListener("click", () => {
-  infoBox.classList.toggle("open");
-  statsBox.classList.remove("open");
-  settingsBox.classList.remove("open"); 
+  openBox("info");
 });
 statsButton.addEventListener("click", () => {
-  statsBox.classList.toggle("open");
-  infoBox.classList.remove("open");
-  settingsBox.classList.remove("open"); 
+  openBox("stats");
 });
 settingsButton.addEventListener("click", () => {
-  settingsBox.classList.toggle("open");
-  infoBox.classList.remove("open");
-  statsBox.classList.remove("open"); 
+  openBox("settings");
 });
 
 infoClose.addEventListener("click", () => {
-  infoBox.classList.remove("open"); 
+  closeBox();
 });
 statsClose.addEventListener("click", () => {
-  statsBox.classList.remove("open"); 
+  closeBox();
 });
 settingsClose.addEventListener("click", () => {
-  settingsBox.classList.remove("open"); 
+  closeBox();
 });
+
+function openBox(box) {
+  if (box === "settings") {
+    settingsBox.classList.toggle("open");
+    infoBox.classList.remove("open");
+    statsBox.classList.remove("open");
+  } else if (box === "stats") {
+    statsBox.classList.toggle("open");
+    infoBox.classList.remove("open");
+    settingsBox.classList.remove("open");
+  } else if (box === "info") {
+    infoBox.classList.toggle("open");
+    statsBox.classList.remove("open");
+    settingsBox.classList.remove("open");
+  }
+}
+function closeBox() {
+  infoBox.classList.remove("open");
+  statsBox.classList.remove("open");
+  settingsBox.classList.remove("open");
+}
+
+openBox("settings");
